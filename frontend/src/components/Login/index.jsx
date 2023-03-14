@@ -92,12 +92,12 @@ const Login = () => {
                     
                    
                     <input name="email" onChange={handleChange} type={'email'} value={inputs.email}variant="outlined" placeholder="Email" className={styles.input}/>
-                    {error.email && <span>{error.email}</span>}
+                    {error.email && <div className="styles.error_msg">{error.email}</div>}
                     <input name="password" onChange={handleChange} type={'password'}value={inputs.password}variant="outlined" placeholder="Password" className={styles.input}/>
                     <Link to="/forgot-password" style={{ alignSelf: "flex-start" }}>
 							<p style={{ padding: "0 15px" }}>Forgot Password ?</p>
 						</Link>
-						{error && <div className={styles.error_msg}>{error}</div>}
+            {error.password && <div className="styles.error_msg">{error.password}</div>}
 					<button type="submit" className={styles.green_btn}>Sign In</button>
                     <div className="loginButton google" onClick={google}>
             <img src={Google} alt="" className="icon" />
